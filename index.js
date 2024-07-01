@@ -3,6 +3,11 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const PORT = process.env.PORT || 3000 ;
+const bodyParser = require("body-parser");
+const ownersRouter = require("./routes/ownersRouter");
+const usersRouter = require("./routes/usersRouter");
+const productsRouter = require("./routes/productsRouter");
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
